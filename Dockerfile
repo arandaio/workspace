@@ -5,6 +5,12 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV GIT_SSL_NO_VERIFY true
 ENV SHELL /bin/bash
 
+# use spanish as language
+RUN locale-gen es_ES.UTF-8
+ENV LANG es_ES.UTF-8
+ENV LANGUAGE es_ES:es
+ENV LC_ALL es_ES.UTF-8
+
 # packages
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
