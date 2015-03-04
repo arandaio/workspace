@@ -10,3 +10,8 @@ An ubuntu based Docker image with a basic set of tools for testing purposes.
 * github.com/arandaio/dotvim
 * Git
 * wget
+
+
+## License
+
+Copyright (c) 2015 Javier Aranda - Released under [MIT](LICENSE) license
