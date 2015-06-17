@@ -18,6 +18,11 @@ RUN apt-get update -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# direnv
+RUN cd /usr/local/bin && \
+    wget -q -O direnv https://github.com/zimbatm/direnv/releases/download/v2.6.0/direnv.linux-amd64 && \
+    chmod u+x direnv
+
 # dotvim
 RUN cd /root && git clone https://github.com/arandaio/dotvim.git .vim && \
     cd .vim && git submodule init && git submodule update
