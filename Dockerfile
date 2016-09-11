@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER Javier Aranda <javier@aranda.io>
+FROM ubuntu:16.04
+MAINTAINER Javier Aranda <javier.aranda.varo@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV GIT_SSL_NO_VERIFY true
@@ -20,12 +20,12 @@ RUN apt-get update -y && \
 
 # direnv
 RUN cd /usr/local/bin && \
-    wget -q -O direnv https://github.com/zimbatm/direnv/releases/download/v2.6.0/direnv.linux-amd64 && \
+    wget -q -O direnv https://github.com/zimbatm/direnv/releases/download/v2.9.0/direnv.linux-amd64 && \
     chmod u+x direnv
 
 # dotvim
 RUN cd /root && git clone https://github.com/arandaio/dotvim.git .vim && \
-    cd .vim && git submodule init && git submodule update
+    cd .vim && git submodule update --init
 
 # dotfiles
 RUN cd /root && git clone https://github.com/arandaio/dotfiles.git .dotfiles && \
