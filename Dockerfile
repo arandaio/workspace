@@ -24,11 +24,11 @@ RUN cd /usr/local/bin && \
     chmod u+x direnv
 
 # dotvim
-RUN cd /root && git clone https://github.com/arandaio/dotvim.git .vim && \
+RUN cd /root && git clone https://github.com/javierav/dotvim.git .vim && \
     cd .vim && git submodule update --init
 
 # dotfiles
-RUN cd /root && git clone https://github.com/arandaio/dotfiles.git .dotfiles && \
+RUN cd /root && git clone https://github.com/javierav/dotfiles.git .dotfiles && \
     cd .dotfiles && ./install.sh -f
 
 # default command
